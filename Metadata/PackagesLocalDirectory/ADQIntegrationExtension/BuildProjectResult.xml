@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Diagnostics
+  GenerationTime="2021-08-03T11:56:42.8982569-07:00">
+  <Items>
+    <Diagnostic>
+      <DiagnosticType>Generation</DiagnosticType>
+      <Severity>Informational</Severity>
+      <Path>dynamics://View/ADQLedgerJournalHeaderEntity</Path>
+      <ElementType>View</ElementType>
+      <Moniker>IsRuntimeServicesMode</Moniker>
+      <Line>0</Line>
+      <Column>0</Column>
+      <Message>Is Runtime Services mode: False</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>ExternalReference</DiagnosticType>
+      <Severity>Warning</Severity>
+      <Path>dynamics://Reference/Microsoft.Commerce.Flighting.Common</Path>
+      <Moniker>AssemblyFileNotFound</Moniker>
+      <Message>Assembly 'Microsoft.Xbox.Experimentation.Contracts, Version=1.0.0.0, Culture=neutral, PublicKeyToken=d91bba2b903dc20f' failed to load because it was not found.</Message>
+    </Diagnostic>
+    <Diagnostic>
+      <DiagnosticType>Compile</DiagnosticType>
+      <Severity>Warning</Severity>
+      <Path>dynamics://Table/ADQLedgerJournalHeaderEntity/Method/PostGeneralLedger</Path>
+      <ElementType>Table Method</ElementType>
+      <Moniker>UnreachableStatement</Moniker>
+      <Line>100</Line>
+      <Column>111</Column>
+      <EndLine>100</EndLine>
+      <EndColumn>112</EndColumn>
+      <Message>The statement is unreachable.</Message>
+    </Diagnostic>
+  </Items>
+  <Aliases />
+</Diagnostics>
