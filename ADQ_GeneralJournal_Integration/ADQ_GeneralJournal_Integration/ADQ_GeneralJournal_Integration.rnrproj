@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
     <Model>ADQ Integration Extension</Model>
@@ -11,13 +10,9 @@
     <GenerateCrossReferences>True</GenerateCrossReferences>
     <RunAppCheckerRules>False</RunAppCheckerRules>
     <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
-    <ProjectGuid>{f2ad9e24-61da-406d-9cab-757804692126}</ProjectGuid>
-    <Name>ADQ_GeneralJournal_Integratuon</Name>
-    <RootNamespace>ADQ_Mambu_Integratuon</RootNamespace>
-    <StartupObject>
-    </StartupObject>
-    <StartupType>
-    </StartupType>
+    <ProjectGuid>{040b29ba-e85a-4573-b526-b3a6910725c3}</ProjectGuid>
+    <Name>ADQ_GeneralJournal_Integration</Name>
+    <RootNamespace>ADQ_GeneralJournal_Integration</RootNamespace>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <Configuration>Debug</Configuration>
@@ -34,6 +29,13 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Data Entities\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Security Duties\" />
+    <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="ADQ.ar-AE.label.txt">
       <SubType>Content</SubType>
@@ -85,17 +87,6 @@
       <Name>ADQ_Integration</Name>
       <Link>Security Roles\ADQ_Integration</Link>
     </Content>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\" />
-    <Folder Include="Code\Classes" />
-    <Folder Include="Data Entities\" />
-    <Folder Include="Data Entity Extensions\" />
-    <Folder Include="Label Files" />
-    <Folder Include="Code" />
-    <Folder Include="Security Duties\" />
-    <Folder Include="Security Privileges\" />
-    <Folder Include="Security Roles\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
   <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />

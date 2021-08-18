@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<AxLabelFile xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
-	<Name>ADQ_en-US</Name>
-	<LabelContentFileName>ADQ.en-US.label.txt</LabelContentFileName>
-	<LabelFileId>ADQ</LabelFileId>
-	<RelativeUriInModelStore>ADQIntegrationExtension\ADQ Integration Extension\AxLabelFile\LabelResources\en-US\ADQ.en-US.label.txt</RelativeUriInModelStore>
-</AxLabelFile>
