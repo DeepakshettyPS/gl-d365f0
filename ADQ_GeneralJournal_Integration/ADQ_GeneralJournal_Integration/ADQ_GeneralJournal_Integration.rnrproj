@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <BuildTasksDirectory Condition=" '$(BuildTasksDirectory)' == ''">$(MSBuildProgramFiles32)\MSBuild\Microsoft\Dynamics\AX</BuildTasksDirectory>
+    <Model>ADQ Integration Extension</Model>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <OutputPath>bin</OutputPath>
+    <SchemaVersion>2.0</SchemaVersion>
+    <GenerateCrossReferences>True</GenerateCrossReferences>
+    <RunAppCheckerRules>False</RunAppCheckerRules>
+    <LogAppcheckerDiagsAsErrors>False</LogAppcheckerDiagsAsErrors>
+    <ProjectGuid>{040b29ba-e85a-4573-b526-b3a6910725c3}</ProjectGuid>
+    <Name>ADQ_GeneralJournal_Integration</Name>
+    <RootNamespace>ADQ_GeneralJournal_Integration</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <Configuration>Debug</Configuration>
+    <DBSyncInBuild>False</DBSyncInBuild>
+    <GenerateFormAdaptors>False</GenerateFormAdaptors>
+    <Company>
+    </Company>
+    <Partition>initial</Partition>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DataEntityExpandParentChildRelations>False</DataEntityExpandParentChildRelations>
+    <DataEntityUseLabelTextAsFieldName>False</DataEntityUseLabelTextAsFieldName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="Data Entities\" />
+    <Folder Include="Label Files\" />
+    <Folder Include="Security Duties\" />
+    <Folder Include="Security Privileges\" />
+    <Folder Include="Security Roles\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ADQ.ar-AE.label.txt">
+      <SubType>Content</SubType>
+      <Name>ADQ.ar-AE.label.txt</Name>
+      <DependentUpon>AxLabelFile\ADQ_ar-AE</DependentUpon>
+    </Content>
+    <Content Include="ADQ.en-GB.label.txt">
+      <SubType>Content</SubType>
+      <Name>ADQ.en-GB.label.txt</Name>
+      <DependentUpon>AxLabelFile\ADQ_en-GB</DependentUpon>
+    </Content>
+    <Content Include="ADQ.en-US.label.txt">
+      <SubType>Content</SubType>
+      <Name>ADQ.en-US.label.txt</Name>
+      <DependentUpon>AxLabelFile\ADQ_en-US</DependentUpon>
+    </Content>
+    <Content Include="AxDataEntityView\ADQLedgerJournalHeaderEntity">
+      <SubType>Content</SubType>
+      <Name>ADQLedgerJournalHeaderEntity</Name>
+      <Link>Data Entities\ADQLedgerJournalHeaderEntity</Link>
+    </Content>
+    <Content Include="AxLabelFile\ADQ_ar-AE">
+      <SubType>Content</SubType>
+      <Name>ADQ_ar-AE</Name>
+      <Link>Label Files\ADQ_ar-AE</Link>
+    </Content>
+    <Content Include="AxLabelFile\ADQ_en-GB">
+      <SubType>Content</SubType>
+      <Name>ADQ_en-GB</Name>
+      <Link>Label Files\ADQ_en-GB</Link>
+    </Content>
+    <Content Include="AxLabelFile\ADQ_en-US">
+      <SubType>Content</SubType>
+      <Name>ADQ_en-US</Name>
+      <Link>Label Files\ADQ_en-US</Link>
+    </Content>
+    <Content Include="AxSecurityDuty\ADQ_Integration">
+      <SubType>Content</SubType>
+      <Name>ADQ_Integration</Name>
+      <Link>Security Duties\ADQ_Integration</Link>
+    </Content>
+    <Content Include="AxSecurityPrivilege\ADQ_Integration">
+      <SubType>Content</SubType>
+      <Name>ADQ_Integration</Name>
+      <Link>Security Privileges\ADQ_Integration</Link>
+    </Content>
+    <Content Include="AxSecurityRole\ADQ_Integration">
+      <SubType>Content</SubType>
+      <Name>ADQ_Integration</Name>
+      <Link>Security Roles\ADQ_Integration</Link>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.Common.targets" />
+  <Import Project="$(BuildTasksDirectory)\Microsoft.Dynamics.Framework.Tools.BuildTasks.targets" />
+</Project>
